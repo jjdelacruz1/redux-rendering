@@ -8,6 +8,12 @@ const reducer = (state = initialState, action) => {
     const { type } = action;
 
     // Add a Name Tag
+    if (type === "ADDNAME") {
+        return [
+            ...state,
+            newName[0].value
+        ]
+    }
 
     return state;
 }
