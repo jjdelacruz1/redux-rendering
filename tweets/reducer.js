@@ -44,9 +44,20 @@ const reducer = (state = initialState, action) => {
 
     // ACTION 1 - Sort by # likes
 
+    if (type === "SORTLIKES") {
+        return [...state.sort(function(a, b) {return b.likes-a.likes})]
+    }
+
     // ACTION 2 - Sort by # retweets
+
+    if (type === "SORTRETWEETS") {
+        return [...state.sort(function(a, b) {return b.retweets-a.retweets})]
+    }
 
     // ACTION 3 - Sort by # replies
     
+    if (type === "SORTREPLIES") {
+        return [...state.sort(function(a, b) {return b.replies-a.replies})]
+    }
     return state;
 }
