@@ -15,6 +15,7 @@ const reducer = (state = initialState, action) => {
 
     // ACTION - Change either card to a random new one (Try implementing one action that both buttons dispatch)
     if (type === "RANDOMCARD1") {
+        // console.log(initialState) ask if this is correct and if it is a pure function
         return [
             {
                 value: randomValue(),
