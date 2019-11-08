@@ -21,11 +21,11 @@ const reducer = (state = initialState, action) => {
                 value: randomValue(),
                 suit: randomSuit()
             },
-            state[1]
+            {...state[1]}
         ]
     } else if (type === "RANDOMCARD2") {
         return [
-            state[0],
+            {...state[0]},
             {
                 value: randomValue(),
                 suit: randomSuit()
